@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario categorias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/estilos.css"/>
+    </head>
+    <body>
+
+        <header>
+            <h1>Mi Empresa</h1>
+        </header>
+
+        <main class="contenedor">
+            <form class="form" id="formularioCategorias" action="../categorias.php" method="post">
+
+                <h2>Ingrese una nueva categoría:</h2>
+
+                <div class="input">
+                    <label for="nombreCategoria">Nombre de la categoría: </label>
+                    <input type="text" name="nombreCategoria" id="nombreCategoria" pattern="[a-z A-Z]*">
+                </div>
+
+                <div class="contenedorBotones">
+                    <button type="submit" class="btn btnEnviar" name="accion" value="guardar">Enviar</button>
+                    <button type="button" class="btn btnCancelar"><a href="/miproyecto">Cancelar</a></button>
+                </div>
+                
+                <div class="contenedorBotones">
+                    <button type="button" class="btn"><a href="categorias.php">Listado de Categorias</a></button>
+                </div>
+
+            </form>
+        </main>
+
+        <footer><img src="../../assets/img/icono-copyright.png" alt="copiright"/> Desarrollado por Manuel Gonzalez. 2023.</footer>
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="../../assets/js/validaciones.js"></script>
+    </body>
+</html>

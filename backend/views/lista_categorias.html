@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listado de categorias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/estilos.css"/>
+
+    </head>
+    <body>
+        <header>
+            <h1>Mi Empresa</h1>
+        </header>
+
+        <main class="contenedor contenedorTablas">
+            <h1>Listado de categorias</h1>
+            <table border="1" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php foreach ($listadoCategorias as $indice => $categoria){ ?>
+
+                    <tr>
+                        <td><?php echo $categoria['id']; ?></td>
+                        <td><?php echo $categoria['nombre']; ?></td>
+                    </tr>
+
+                    <?php } ?>
+                </tbody>
+            </table>
+
+            <div class="botonesHome">
+                <button ><a href="../backend/categorias.php?accion=agregar">Agregar categoria</a></button>
+            </div>
+
+        </main>
+
+        <footer><img src="../assets/img/icono-copyright.png" alt="copyright"/> Desarrollado por Manuel Gonzalez. 2023.</footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="../../assets/js/validaciones.js"></script>
+    </body>
+</html>
